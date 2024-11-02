@@ -1,0 +1,70 @@
+/* CONFIGURATION NAVBAR */
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 0 40px 0 40px;
+}
+
+/* CONFIGURATION LOGO */
+.logo-box {
+    display: flex;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo-box h1 {
+    color: #33FF33;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.logo-box i {
+    color: #33FF33;
+    font-size: 25px;
+    height: 20px;
+}
+
+/* CONFIGURATION LINKS NAVBAR */
+.navigation-bar ul {
+    display: flex;
+    justify-content: end;
+    gap: 40px;
+    list-style: none;
+}
+
+.navigation-bar li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s ease;
+}
+
+.navigation-bar li a {
+    font-size: 18px;
+    color: #33FF33;
+    text-decoration: none;
+}
+
+/* navbar animation */
+.navigation-bar li:hover {
+    transform: translateY(-5px);
+}
+
+.navigation-bar li {
+    position: relative;
+}
+
+.navigation-bar li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #33FF33;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+
+.navigation-bar li a:hover::after {
+    transform: scaleX(1);
+}
